@@ -1,11 +1,5 @@
 // hello-knex-1.js
-const knex = require("knex")({
-  client: "sqlite3",
-  connection: {
-    filename: "./hello.sqlite"
-  },
-  useNullAsDefault: true // coisas de sqlite.. ¯\_(ツ)_/¯
-});
+const knex = require('./db');
 
 // criar uma tabela
 knex.schema.createTable("convidado", (table) =>{
